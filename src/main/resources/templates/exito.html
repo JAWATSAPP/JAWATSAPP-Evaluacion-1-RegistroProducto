@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registro Exitoso</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #ccffff;
+                color: #ff6600;
+            }
+            .container {
+                text-align: center;
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 40px -10px 70px rgba(201, 147, 218, 0.9);
+                width: 400px;
+            }
+            table {
+                margin: 0 auto;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            form {
+                background-color: #ffcccc;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 40px -10px 70px rgba(201, 147, 218, 0.9);
+                text-align: center;
+                min-width: 50px;
+                max-width: 50%;
+                width: 400px;
+                margin: 20px;
+            }
+            td {
+                padding: 8px;
+                text-align: left;
+            }
+            div {
+                text-align: center;
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 40px -10px 70px rgba(201, 147, 218, 0.9);
+                width: 400px;
+            }
+            button {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            label {
+                display: block;
+                margin-top: 15px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            input::placeholder{
+
+                text-align: center;
+                /*  font-style: italic; */
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Registro Exitoso</h1>
+            <table>
+                <tr> 
+                    <td>Nombre Producto:</td>
+                    <td><span th:text="${producto.nomProdct}"></span></td> 
+                </tr> 
+                <tr>
+                    <td>Fecha de Caducidad:</td> 
+                    <td><span th:text="${producto.fecCadu}"></span></td> 
+                </tr>
+                <tr> 
+                    <td>Strock  Max:</td>
+                    <td><span th:text="${producto.stockMax}"></span></td>
+                </tr>
+                <tr>
+                    <td>Stock Min:</td> 
+                    <td><span th:text="${producto.stockMin}"></span></td>
+                </tr>
+                <tr>
+                    <td>Precio Unitario:</td>
+                    <td><span th:text="${producto.precioUnit}"></span></td>
+                </tr>
+                <tr>
+                    <td>Categoria:</td>
+                    <td><span th:text="${producto.categ}"></span></td>
+                </tr>
+                <tr> 
+                    <td>Marca:</td>
+                    <td><span th:text="${producto.marca}"></span></td>
+                </tr>
+            </table>
+            <button onclick="window.location.href = '/registro'">Volver al Registro</button>
+            <br>
+            </body>
+            </html>

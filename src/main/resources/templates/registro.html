@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REGISTRO</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <style>
+        form{
+            background-color: #f6f1cb; /* Cambia este color por el que prefieras */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-group{
+            margin-bottom: 15px;
+
+
+            text-align: center;
+            align-content: center;
+        }
+        input:hover{
+            border: 2px solid #ccff66;
+            background-color: #ffcc66;
+            color: rgb(76, 6, 240);
+            cursor: pointer;
+        }
+        input:active{
+            background-color: #ffcc99;
+
+
+        }
+        input {
+            width: 100%;
+            padding: 8px; /* Padding de las casillas */
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .btn-registrar {
+            font-size: 18px; /* Tamaño de la fuente del texto del botón */
+            padding: 10px 20px; /* Espaciado interno del botón (arriba/abajo y izquierda/derecha) */
+            border-radius: 5px; /* Bordes redondeados del botón */
+            background-color: #4CAF50; /* Color de fondo del botón, aquí es verde */
+            color: white;
+        }
+    </style>
+    <body>
+        <div class="container mt-5"> 
+            <div class="card"> 
+
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Formulario de Registro</h3> 
+
+                    <form action="/registro" method="post" th:object="${producto}">
+                        <div class="mb-3"> 
+
+                            <label for="nomProdct" class="form-label">Nombre Producto:</label> 
+                            <input type="text" class="form-control" id="nomProdct" name="nomProdct" placeholder="Ingresar Nombre Producto" th:field="*{nomProdct}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="fecCadu" class="form-label">Fecha de Caducida:</label> 
+                            <input type="date" class="form-control" id="fecCadu" name="fecCadu" placeholder="Ingresa Fecha de Caducidad" th:field="*{fecCadu}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="stockMax" class="form-label">Stock Maximo:</label> 
+                            <input type="text" class="form-control" id="stockMax" name="stockMax" placeholder="Ingresar Strock Max" th:field="*{stockMax}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="stockMin" class="form-label">Stock Minimo:</label> 
+                            <input type="text" class="form-control" id="stockMin" name="stockMin" placeholder="Ingresar Strock Min" th:field="*{stockMin}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="precioUnit" class="form-label">Precio Unitario:</label> 
+                            <input type="text" class="form-control" id="precioUnit" name="precioUnit" placeholder="Ingresar Precio Unitario" th:field="*{precioUnit}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="categ" class="form-label">Categoria:</label> 
+                            <input type="text" class="form-control" id="categ" name="categ" placeholder="Ingresar Categoria" th:field="*{categ}" required> 
+                        </div> <div class="mb-3"> 
+
+                            <label for="marca" class="form-label">Marca:</label> 
+                            <input type="text" class="form-control" id="marca" name="marca" placeholder="Ingresar  la Marca" th:field="*{marca}" required> 
+                        
+                        </div><div class="text-center"> 
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                        </div> 
+                    </form>
+                </div> 
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlZp6RAjHL6m+cCCzT8KQvFVSAb4S7K2Kq47gF2K8IMIBpM30G6trC31JJc" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGhrtSss/0PpMbYh4Ys58yRvrX8FW+b2zt3tDkPPmVy38GQp1rF6Ybb2UG4" crossorigin="anonymous">
+
+        </script> 
+
+    </body>
+</html>
